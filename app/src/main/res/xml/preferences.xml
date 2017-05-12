@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="tong_quan"
+        android:title="Tổng Quan">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_notifications"
+            android:title="Hiển Thị Trên Thanh Trạng Thái" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="show_notifications"
+            android:key="show_notifications_vibrate"
+            android:title="Vibrate"></SwitchPreference>
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:dependency="show_notifications"
+            android:key="show_notifications_ringtone"
+            android:ringtoneType="notification"
+            android:title="Ringtone"></RingtonePreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="dong_bo"
+        android:title="Đồng Bộ">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="sync_auto"
+            android:summary="Tin Tức sẽ tự động cập nhật"
+            android:title="Tự động đồng bộ" />
+        <ListPreference
+            android:defaultValue="2000"
+            android:dependency="sync_auto"
+            android:entries="@array/updateNews"
+            android:entryValues="@array/updateNewsValues"
+            android:key="sync_news"
+            android:summary="Wiffi or 3G,v.v..."
+            android:title="Loại Đồng Bộ Tin Tức" />
+        <ListPreference
+            android:defaultValue="1000"
+            android:dependency="sync_auto"
+            android:entries="@array/updateInterval"
+            android:entryValues="@array/updateIntervalValues"
+            android:key="sync_time"
+            android:summary="Thời gian trung bình sẽ cập nhật lại tin tức"
+            android:title="Thời gian đồng bộ" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="news_appear"
+        android:title="News Appear">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="news_default"
+            android:summary="Sử dụng mặc định hệ thống"
+            android:title="Mặc định" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_trang_chu"
+            android:summary="Hiển Thị Tin Tức Tổng Quan"
+            android:title="Trang Chủ" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_the_thao"
+            android:summary="Hiển Thị Tin Tức Thể Thao"
+            android:title="Thể Thao" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_chinh_tri"
+            android:summary="Hiển Thị Tin Tức Chính Trị"
+            android:title="Chính Trị" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_xa_hoi"
+            android:summary="Hiển Thị Tin Tức Xã Hội"
+            android:title="Xã Hội" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_van_hoa"
+            android:summary="Hiển Thị Tin Tức Văn Hóa"
+            android:title="Văn Hóa" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="news_default"
+            android:key="news_the_gioi"
+            android:summary="Hiển Thị Tin Tức Thế Giới"
+            android:title="Thế Giới" />
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory-->
+    <!--android:title="Sync Information"-->
+    <!--android:key="sync_category">-->
+
+    <!--<CheckBoxPreference-->
+    <!--android:key="perform_sync"-->
+    <!--android:summary="Enable or disable data sync"-->
+    <!--android:title="Enable Auto Sync"-->
+    <!--android:defaultValue="true"/>-->
+
+    <!--<ListPreference-->
+    <!--android:key="sync_interval"-->
+    <!--android:title="Sync interval"-->
+    <!--android:summary="Define how often sync will be performed"-->
+    <!--android:defaultValue="1000"-->
+    <!--android:entries="@array/updateInterval"-->
+    <!--android:entryValues="@array/updateIntervalValues"-->
+    <!--android:dependency="perform_sync"/>-->
+
+    <!--</PreferenceCategory>-->
+
+    <!--<PreferenceCategory-->
+    <!--android:title="Personal Informations"-->
+    <!--android:key="personal_category">-->
+
+
+    <!--<EditTextPreference-->
+    <!--android:key="full_name"-->
+    <!--android:title="Name"-->
+    <!--android:summary="Enter Your Complete Name"-->
+    <!--android:dialogTitle="Your Name"-->
+    <!--android:dialogMessage="Enter Your Complete Name"-->
+    <!--android:defaultValue=""-->
+    <!--android:inputType="textCapWords"/>-->
+
+    <!--<EditTextPreference-->
+    <!--android:key="email_address"-->
+    <!--android:title="Email Address"-->
+    <!--android:summary="Enter Your Email Address"-->
+    <!--android:dialogTitle="Enter Your Email Address"-->
+    <!--android:dialogMessage="Enter Your Email Address"-->
+    <!--android:defaultValue=""-->
+    <!--android:inputType="textEmailAddress"/>-->
+
+    <!--</PreferenceCategory>-->
+
+
+    <!--<PreferenceCategory-->
+    <!--android:title="Customisations"-->
+    <!--android:key="custom_category">-->
+
+
+    <!--<RingtonePreference-->
+    <!--android:key="notification_ringtone"-->
+    <!--android:title="Notification Ringtone"-->
+    <!--android:summary="Customise Notification Ringtone for you"-->
+    <!--android:dialogTitle="Notification Ringtone"-->
+    <!--android:dialogMessage="Customise Notification Ringtone for you"/>-->
+
+
+    <!--</PreferenceCategory>-->
+
+</PreferenceScreen>

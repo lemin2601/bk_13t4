@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="updateInterval">
+        <item name="1000">Cập nhật sau mỗi 1 phút</item>
+        <item name="2000">Cập nhật sau mỗi 1 giờ</item>
+        <item name="3000">Cập nhật sau mỗi 1 ngày</item>
+    </string-array>
+
+    <string-array name="updateIntervalValues">
+        <item name="1000">1 Phút</item>
+        <item name="2000">1 Giờ</item>
+        <item name="3000">1 Ngày</item>
+
+    </string-array>
+    <string-array name="updateNews">
+        <item name="1000">Chỉ sử dụng wifi</item>
+        <item name="2000">Chỉ sử dụng 3G</item>
+        <item name="3000">Cả wifi và 3G</item>
+    </string-array>
+
+    <string-array name="updateNewsValues">
+    <item name="1000">Wifi</item>
+    <item name="2000">3G</item>
+    <item name="3000">Wifi &amp; 3G</item>
+    </string-array>
+</resources>
